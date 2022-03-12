@@ -1,1 +1,1 @@
-module.exports = "<YOUR MONGO URI>";
+module.exports = process.env.monkoKEY
