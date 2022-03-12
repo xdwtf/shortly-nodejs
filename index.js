@@ -16,8 +16,8 @@ app.use('/static', express.static(__dirname + '/static'));
 
 app.use(express.urlencoded({ extended: true }));
 
-const mongoURI = require('./config/monkoKEY');
-mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true, },).then(() => console.log("Connected !"),);
+const mongoURI = process.env.monkoKEY;
+mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false, useCreateIndex: true, },).then(() => console.log("mongoURI Connected !"),);
 
 app.use(cookieParser('random'));
 

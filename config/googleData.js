@@ -1,2 +1,2 @@
-module.exports.clientId = "<Add Your Client ID>";
-module.exports.clientSecret = "<Add Your Client Secret>";
+module.exports.clientId = process.env.clientId;
+module.exports.clientSecret = process.env.clientSecret;
