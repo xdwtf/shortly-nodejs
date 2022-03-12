@@ -9,27 +9,9 @@
 </head
 <body>
     <div class="container text-center">
-        <h3 class="p-4">Welcome <%= user.username %> </h3>
+        <h3 class="p-4">Welcome </h3>
         <h3 class="p-2">If You See This Page <br> Then You Have Logged In Successfully ! </h3>
         <a class="btn btn-danger" href="/logout">Logout</a>
-        <div class="container p-3">
-            <form action="/addmsg" method="POST">
-                <div class="form-group">
-                    <textarea class="form-control" name="msg" id="msg" cols="30" rows="3" maxlength="200"
-                        placeholder="Enter Some Message.. 200 characters..."></textarea>
-                </div>
-                <div class="form-group">
-                    <button class="btn btn-outline-success" type="submit">Add Message</button>
-                </div>
-                <div>
-                    <% user.messages.forEach(function(msg, index){ %>
-                    <h4><%= msg %></h4>
-                    <% }) %>
-                </div>
-            </form>
-            <p>
-            </p>
-        </div>
     </div>
 </body>
 </html>
