@@ -13,7 +13,7 @@ var smtpTransport = nodemailer.createTransport({
 
 module.exports.sendResetEmail = async (email, token) => {
    // change first part to your domain
-  var url = "${process.env.APP_NAME}/user/reset-password?token=" + token;
+  var url = process.env.APP_NAME + "/user/reset-password?token=" + token;
 
   await smtpTransport.sendMail({
     from: "<your email>",
@@ -26,7 +26,7 @@ module.exports.sendResetEmail = async (email, token) => {
 
 module.exports.sendVerifyEmail = async (email, token) => {
   // change first part to your domain
-  var url = "${process.env.APP_NAME}/user/verifyemail?token=" + token;
+  var url = process.env.APP_NAME + "/user/verifyemail?token=" + token;
 
   await smtpTransport.sendMail({
     from: "<your email>",
